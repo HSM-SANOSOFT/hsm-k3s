@@ -16,4 +16,4 @@ spec:
               service:
                 name: hsm-be-core-gateway
                 port:
-                  number: 3000
+                  number: 41000
