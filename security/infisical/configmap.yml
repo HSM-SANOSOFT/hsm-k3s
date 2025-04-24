@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: infisical-config
-  namespace: security
-data:
-  hostAPI: http://192.168.23.100/api

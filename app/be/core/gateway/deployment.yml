@@ -22,6 +22,8 @@ spec:
             - containerPort: 41000
           envFrom:
             - configMapRef:
-                name: hsm-be-core-gateway
+                name: hsm-be-core-gateway-configmap
             - secretRef:
-                name: hsm-be-core-gateway
+                name: hsm-be-core-gateway-secret
+      imagePullSecrets:
+        - name: ghcr-login-secret
