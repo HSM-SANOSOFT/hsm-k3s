@@ -16,7 +16,7 @@ spec:
         app: hsm-be-core-gateway
     spec:
       containers:
-        - name: gateway
+        - name: hsm-be-core-gateway
           image: ghcr.io/hsm-sanosoft/hsm-be-core-gateway:latest
           ports:
             - containerPort: 41000

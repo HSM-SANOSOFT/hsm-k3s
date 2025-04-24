@@ -6,9 +6,10 @@ metadata:
   labels:
     app: hsm-be-core-gateway
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: hsm-be-core-gateway
   ports:
-    - port: 3000                
+    - name: http
+      port: 3000                
       targetPort: 41000           
