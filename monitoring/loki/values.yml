@@ -52,3 +52,18 @@ bloomCompactor:
   replicas: 0
 bloomGateway:
   replicas: 0
+  
+  
+chunksCache:
+  resources:
+    requests:
+      memory: 1Gi
+    limits:
+      memory: 2Gi
+
+resultsCache:
+  resources:
+    requests:
+      memory: 256Mi
+    limits:
+      memory: 512Mi
