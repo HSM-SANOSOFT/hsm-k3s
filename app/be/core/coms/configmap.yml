@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hsm-be-core-coms-configmap
+  namespace: app
+  labels:
+    app: hsm-be-core-coms
+data:
+  LD_LIBRARY_PATH: /usr/lib/oracle/12.1/client64/lib

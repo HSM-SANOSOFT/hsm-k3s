@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hsm-be-core-coms
+  namespace: app
+  labels:
+    app: hsm-be-core-coms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hsm-be-core-coms
+  template:
+    metadata:
+      labels:
+        app: hsm-be-core-coms
+    spec:
+      containers:
+        - name: hsm-be-core-coms
+          image: ghcr.io/hsm-sanosoft/hsm-be-core-coms:latest
+          ports:
+            - containerPort: 41000
+          envFrom:
+            - configMapRef:
+                name: hsm-be-core-coms-configmap
+            - secretRef:
+                name: hsm-be-core-coms-secret
+      imagePullSecrets:
+        - name: ghcr-login-secret

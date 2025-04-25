@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hsm-be-core-users
+  namespace: app
+  labels:
+    app: hsm-be-core-users
+spec:
+  type: ClusterIP
+  selector:
+    app: hsm-be-core-users
+  ports:
+    - name: tcp
+      port: 3000                
+      targetPort: 3000
+      protocol: TCP           
