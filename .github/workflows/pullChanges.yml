@@ -1,0 +1,19 @@
+name: pull-changes
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+    pull:
+        runs-on: self-hosted
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v3
+                with:
+                    token: ${{secrets.GITHUB_TOKEN}} 
+            -   name: pull
+                run: |
+                    cd hsm-k3s
+                    echo "Pulling changes from main branch"
+                    git pull origin main
