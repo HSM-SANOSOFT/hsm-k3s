@@ -19,4 +19,5 @@ kubectl apply -f ./infisical/secret-token-reviewer.yml -n $NAMESPACE
 
 echo ">>> Seting up Infisical..."
 kubectl patch serviceaccount infisical-token-reviewer -p '{"secrets": [{"name": "infisical-token-reviewer-token"}]}' -n $NAMESPACE
+kubectl patch serviceaccount infisical-service-account -p '{"secrets": [{"name": "infisical-token-reviewer-token"}]}' -n $NAMESPACE
 kubectl get secret infisical-token-reviewer-token -n $NAMESPACE -o=jsonpath='{.data.token}' | base64 --decode

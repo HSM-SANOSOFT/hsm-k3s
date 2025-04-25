@@ -6,15 +6,15 @@ metadata:
   labels:
     app: hsm-be-core-gateway
 data:
-  hsm_be_core_gateway: hsm-be-core-gateway
+  hsm_be_core_gateway: hsm-be-core-gateway.app.svc.cluster.local
   hsm_be_core_gateway_port: "41000"
-  hsm_be_core_auth: hsm-be-core-auth
-  hsm_be_core_coms: hsm-be-core-coms
-  hsm_be_core_common: hsm-be-core-common
-  hsm_be_core_docs: hsm-be-core-docs
-  hsm_be_core_users: hsm-be-core-users
-  hsm_be_has_gaa_gth_gsr_postulantes: hsm-be-has-gaa-gth-gsr-postulantes
-  hsm_be_has_gaa_gth_gsr_trabajos: hsm-be-has-gaa-gth-gsr-trabajos
-  hsm_be_has_cob_gdp_transaccion: hsm-be-has-cob-gdp-transaccion
-  hsm_be_has_cob_gdp_compensacion: hsm-be-has-cob-gdp-compensacion
-  hsm_be_has_cob_gdp_recaudo: hsm-be-has-cob-gdp-recaudo
+  hsm_be_core_auth: hsm-be-core-auth.app.svc.cluster.local
+  hsm_be_core_coms: hsm-be-core-coms.app.svc.cluster.local
+  hsm_be_core_common: hsm-be-core-common.app.svc.cluster.local
+  hsm_be_core_docs: hsm-be-core-docs.app.svc.cluster.local
+  hsm_be_core_users: hsm-be-core-users.app.svc.cluster.local
+  hsm_be_has_gaa_gth_gsr_postulantes: hsm-be-has-gaa-gth-gsr-postulantes.app.svc.cluster.local
+  hsm_be_has_gaa_gth_gsr_trabajos: hsm-be-has-gaa-gth-gsr-trabajos.app.svc.cluster.local
+  hsm_be_has_cob_gdp_transaccion: hsm-be-has-cob-gdp-transaccion.app.svc.cluster.local
+  hsm_be_has_cob_gdp_compensacion: hsm-be-has-cob-gdp-compensacion.app.svc.cluster.local
+  hsm_be_has_cob_gdp_recaudo: hsm-be-has-cob-gdp-recaudo.app.svc.cluster.local

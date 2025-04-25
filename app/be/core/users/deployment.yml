@@ -5,6 +5,8 @@ metadata:
   namespace: app
   labels:
     app: hsm-be-core-users
+  annotations:
+    secrets.infisical.com/auto-redeploy: "true"
 spec:
   replicas: 1
   selector:
