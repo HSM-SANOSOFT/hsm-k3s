@@ -5,18 +5,14 @@ ufw allow from 10.42.0.0/16 to any #pods
 ufw allow from 10.43.0.0/16 to any #services
 set -e
 
-K3S_VERSION="v1.26.5+k3s1"
-K3S_KUBECONFIG_MODE="644"
+curl -sfL https://get.k3s.io | sh -
 
-echo ">>> Downloading K3s binary $K3S_VERSION..."
-curl -Lo /usr/local/bin/k3s https://github.com/k3s-io/k3s/releases/download/$K3S_VERSION/k3s
-chmod a+x /usr/local/bin/k3s
+sudo chmod 644 /etc/rancher/k3s/k3s.yaml
 
-echo "K3s binary installed at /usr/local/bin/k3s"
-
- $K3S_KUBECONFIG_MODE k3s server
-
-echo ">>> To start K3s manually:"
-echo ">>> Run: k3s-start"
-
-#sudo cat /var/lib/rancher/k3s/server/node-token
+cd
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+# Show node-token (optional if you want to join other nodes)
+# cat /var/lib/rancher/k3s/server/node-token
