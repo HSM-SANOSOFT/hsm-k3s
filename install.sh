@@ -1,9 +1,12 @@
+set -e
+
+sudo swapoff -a
+
 ufw disable
 
 ufw allow 6443/tcp #apiserver
 ufw allow from 10.42.0.0/16 to any #pods
 ufw allow from 10.43.0.0/16 to any #services
-set -e
 
 curl -sfL https://get.k3s.io | sh -
 
