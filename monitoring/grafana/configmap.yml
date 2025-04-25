@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-dashboards
+  namespace: monitoring
+  labels:
+    grafana_dashboard: "1"
+data:
+  loki-overview.json: |
+    {
+      "annotations": {
+        "list": []
+      },
+      "editable": true,
+      "gnetId": null,
+      "graphTooltip": 1,
+      "id": null,
+      "iteration": 1654873196515,
+      "panels": [
+        {
+          "datasource": "Loki",
+          "type": "logs",
+          "title": "Logs por contenedor",
+          "targets": [
+            {
+              "expr": "{namespace=\"app\"}",
+              "refId": "A"
+            }
+          ],
+          "gridPos": {
+            "h": 8,
+            "w": 24,
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "schemaVersion": 27,
+      "version": 1,
+      "title": "Loki Logs Overview"
+    }
