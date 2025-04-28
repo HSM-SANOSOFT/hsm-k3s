@@ -27,6 +27,8 @@ spec:
                 name: hsm-be-has-cob-gdp-transaccion-configmap
             - secretRef:
                 name: hsm-be-has-cob-gdp-transaccion-secret
+            - secretRef:
+                name: general-secret
       imagePullSecrets:
         - name: ghcr-login-secret
 

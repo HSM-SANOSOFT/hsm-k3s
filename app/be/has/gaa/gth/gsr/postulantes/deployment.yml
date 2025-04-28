@@ -1,33 +1,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hsm-be-core-users
+  name: hsm-be-has-gaa-gth-gsr-postulante
   namespace: app
   labels:
-    app: hsm-be-core-users
+    app: hsm-be-has-gaa-gth-gsr-postulante
   annotations:
     secrets.infisical.com/auto-redeploy: "true"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hsm-be-core-users
+      app: hsm-be-has-gaa-gth-gsr-postulante
   template:
     metadata:
       labels:
-        app: hsm-be-core-users
+        app: hsm-be-has-gaa-gth-gsr-postulante
     spec:
       containers:
-        - name: hsm-be-core-users
-          image: ghcr.io/hsm-sanosoft/hsm-be-core-users:latest
+        - name: hsm-be-has-gaa-gth-gsr-postulante
+          image: ghcr.io/hsm-sanosoft/hsm-be-has-gaa-gth-gsr-postulante:latest
           ports:
             - containerPort: 3000
           envFrom:
             - configMapRef:
-                name: hsm-be-core-users-configmap
+                name: hsm-be-has-gaa-gth-gsr-postulante-configmap
             - secretRef:
-                name: hsm-be-core-users-secret
+                name: hsm-be-has-gaa-gth-gsr-postulante-secret
             - secretRef:
                 name: general-secret
       imagePullSecrets:
         - name: ghcr-login-secret
+

@@ -21,11 +21,13 @@ spec:
         - name: hsm-be-core-gateway
           image: ghcr.io/hsm-sanosoft/hsm-be-core-gateway:latest
           ports:
-            - containerPort: 41000
+            - containerPort: 3000
           envFrom:
             - configMapRef:
                 name: hsm-be-core-gateway-configmap
             - secretRef:
                 name: hsm-be-core-gateway-secret
+            - secretRef:
+                name: general-secret
       imagePullSecrets:
         - name: ghcr-login-secret

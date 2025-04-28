@@ -27,5 +27,7 @@ spec:
                 name: hsm-be-core-coms-configmap
             - secretRef:
                 name: hsm-be-core-coms-secret
+            - secretRef:
+                name: general-secret
       imagePullSecrets:
         - name: ghcr-login-secret
