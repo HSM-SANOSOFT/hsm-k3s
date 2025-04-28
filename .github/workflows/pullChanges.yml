@@ -14,3 +14,4 @@ jobs:
                   cd hsm-k3s
                   echo "Pulling changes from main branch"
                   git pull origin main
+                  kubectl apply -R -f ./app

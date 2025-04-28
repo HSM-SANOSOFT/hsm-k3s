@@ -1,31 +1,16 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Service
 metadata:
-  name: hsm-be-core-common
+  name: hsm-be-has-cob-gdp-transaccion
   namespace: app
   labels:
-    app: hsm-be-core-common
-  annotations:
-    secrets.infisical.com/auto-redeploy: "true"
+    app: hsm-be-has-cob-gdp-transaccion
 spec:
-  replicas: 1
+  type: ClusterIP
   selector:
-    matchLabels:
-      app: hsm-be-core-common
-  template:
-    metadata:
-      labels:
-        app: hsm-be-core-common
-    spec:
-      containers:
-        - name: hsm-be-core-common
-          image: ghcr.io/hsm-sanosoft/hsm-be-core-common:latest
-          ports:
-            - containerPort: 41000
-          envFrom:
-            - configMapRef:
-                name: hsm-be-core-common-configmap
-            - secretRef:
-                name: hsm-be-core-common-secret
-      imagePullSecrets:
-        - name: ghcr-login-secret
+    app: hsm-be-has-cob-gdp-transaccion
+  ports:
+    - name: tcp
+      port: 3000                
+      targetPort: 3000
+      protocol: TCP           

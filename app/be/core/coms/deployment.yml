@@ -21,7 +21,7 @@ spec:
         - name: hsm-be-core-coms
           image: ghcr.io/hsm-sanosoft/hsm-be-core-coms:latest
           ports:
-            - containerPort: 41000
+            - containerPort: 3000
           envFrom:
             - configMapRef:
                 name: hsm-be-core-coms-configmap

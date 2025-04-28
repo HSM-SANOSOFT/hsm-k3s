@@ -21,7 +21,7 @@ spec:
         - name: hsm-be-core-auth
           image: ghcr.io/hsm-sanosoft/hsm-be-core-auth:latest
           ports:
-            - containerPort: 41000
+            - containerPort: 3000
           envFrom:
             - configMapRef:
                 name: hsm-be-core-auth-configmap
