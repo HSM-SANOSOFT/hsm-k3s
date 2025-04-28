@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: hsm-be-has-gaa-gth-gsr-postulante-configmap
+  name: hsm-be-has-gaa-gth-gsr-postulantes-configmap
   namespace: app
   labels:
-    app: hsm-be-has-gaa-gth-gsr-postulante
+    app: hsm-be-has-gaa-gth-gsr-postulantes
 data:
   LD_LIBRARY_PATH: /usr/lib/oracle/12.1/client64/lib

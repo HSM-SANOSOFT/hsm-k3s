@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hsm-be-has-gaa-gth-gsr-postulante
+  name: hsm-be-has-gaa-gth-gsr-postulantes
   namespace: app
   labels:
-    app: hsm-be-has-gaa-gth-gsr-postulante
+    app: hsm-be-has-gaa-gth-gsr-postulantes
   annotations:
     secrets.infisical.com/auto-redeploy: "true"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hsm-be-has-gaa-gth-gsr-postulante
+      app: hsm-be-has-gaa-gth-gsr-postulantes
   template:
     metadata:
       labels:
-        app: hsm-be-has-gaa-gth-gsr-postulante
+        app: hsm-be-has-gaa-gth-gsr-postulantes
     spec:
       containers:
-        - name: hsm-be-has-gaa-gth-gsr-postulante
-          image: ghcr.io/hsm-sanosoft/hsm-be-has-gaa-gth-gsr-postulante:latest
+        - name: hsm-be-has-gaa-gth-gsr-postulantes
+          image: ghcr.io/hsm-sanosoft/hsm-be-has-gaa-gth-gsr-postulantes:latest
           ports:
             - containerPort: 3000
           envFrom:
             - configMapRef:
-                name: hsm-be-has-gaa-gth-gsr-postulante-configmap
+                name: hsm-be-has-gaa-gth-gsr-postulantes-configmap
             - secretRef:
-                name: hsm-be-has-gaa-gth-gsr-postulante-secret
+                name: hsm-be-has-gaa-gth-gsr-postulantes-secret
             - secretRef:
                 name: general-secret
       imagePullSecrets:
