@@ -17,3 +17,4 @@ data:
   hsm_be_has_cob_gdp_transaccion_host: hsm-be-has-cob-gdp-transaccion.app.svc.cluster.local
   hsm_be_has_cob_gdp_compensacion_host: hsm-be-has-cob-gdp-compensacion.app.svc.cluster.local
   hsm_be_has_cob_gdp_recaudo_host: hsm-be-has-cob-gdp-recaudo.app.svc.cluster.local
+
