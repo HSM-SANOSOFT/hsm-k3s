@@ -6,7 +6,7 @@ on:
       - main
 jobs:
     pull:
-        runs-on: self-hosted
+        runs-on: sanosoft13
         steps:
             -   name: pull
                 run: |
