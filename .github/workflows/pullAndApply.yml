@@ -8,13 +8,15 @@ jobs:
     pull:
         runs-on: sanosoft13
         steps:
-            -   name: pull
-                run: |
-                  cd
-                  cd hsm-k3s
-                  echo "Pulling changes from main branch"
-                  git pull origin main
-            - name: apply
-              run: |
-                echo "Applying changes to Kubernetes"
-                kubectl apply -R -f ./app
+          - name: pull
+            run: |
+              cd
+              cd hsm-k3s
+              echo "Pulling changes from main branch"
+              git pull origin main
+          - name: apply
+            run: |
+              cd
+              cd hsm-k3s
+              echo "Applying changes to Kubernetes"
+              kubectl apply -R -f ./app
