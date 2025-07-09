@@ -1,7 +1,8 @@
 set -e
-
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 NAMESPACE="monitoring"
 helm repo add grafana https://grafana.github.io/helm-charts
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
 
 # Create the namespace if not exists
@@ -30,7 +31,8 @@ echo ">>> Installing kube-state-metrics..."
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm install kube-state-metrics prometheus-community/kube-state-metrics -n $NAMESPACE
 
-echo ">>> Installing Tempo..."
+echo ">>> Installing kube-state-metrics..."
+helm upgrade --install kube-state-metrics prometheus-community/kube-state-metrics -n $NAMESPACE
 
 echo ">>> Installing Grafana ConfigMap..."
 kubectl apply -f ./grafana/configmap.yml -n $NAMESPACE
