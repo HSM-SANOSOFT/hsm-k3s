@@ -23,6 +23,9 @@ helm upgrade --install promtail grafana/promtail -n $NAMESPACE -f ./promtail/val
 echo ">>> Installing Mimir..."
 helm upgrade --install mimir grafana/mimir-distributed -n $NAMESPACE -f ./mimir/values.yml
 
+echo ">>> Installing Alloy..."
+helm upgrade --install alloy grafana/alloy -n $NAMESPACE -f ./alloy/values.yml
+
 echo ">>> Installing kube-state-metrics..."
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm install kube-state-metrics prometheus-community/kube-state-metrics -n $NAMESPACE
