@@ -34,6 +34,9 @@ helm install kube-state-metrics prometheus-community/kube-state-metrics -n $NAME
 echo ">>> Installing kube-state-metrics..."
 helm upgrade --install kube-state-metrics prometheus-community/kube-state-metrics -n $NAMESPACE
 
+echo ">>> Installing Grafana Tempo..."
+helm upgrade --install tempo grafana/tempo -n $NAMESPACE -f ./tempo/values.yml
+
 echo ">>> Installing Grafana ConfigMap..."
 kubectl apply -f ./grafana/configmap.yml -n $NAMESPACE
 
