@@ -1,0 +1,8 @@
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: vip-pool
+  namespace: networking
+spec:
+  addresses:
+    - 10.1.1.251/32
