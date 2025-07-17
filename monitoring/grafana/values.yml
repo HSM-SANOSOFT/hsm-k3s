@@ -58,8 +58,8 @@ resources:
 
 grafana.ini:
   server:
-    root_url: "%(protocol)s://%(domain)s/monitoring/"
-    serve_from_sub_path: true
+    root_url: "%(protocol)s://%(domain)s/"
+    serve_from_sub_path: false
 
 initChownData:
   enabled: false

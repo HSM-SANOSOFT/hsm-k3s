@@ -7,9 +7,10 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
   rules:
-    - http:
+    - host: monitoring.hospitalsm.org
+      http:
         paths:
-          - path: /monitoring
+          - path: /
             pathType: Prefix
             backend:
               service:
