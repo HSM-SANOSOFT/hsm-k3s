@@ -1,11 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: grafana-ingress
+  name: monitoring-ingress
   namespace: monitoring
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: web
+    traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
 spec:
+  ingressClassName: traefik
+  tls:
+    - hosts:
+        - monitoring.hospitalsm.org
+      secretName: monitoring-tls-secret
   rules:
     - host: monitoring.hospitalsm.org
       http:

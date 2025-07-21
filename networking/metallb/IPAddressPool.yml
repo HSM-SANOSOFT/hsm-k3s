@@ -6,3 +6,4 @@ metadata:
 spec:
   addresses:
     - 10.1.1.250/32
+    - 10.1.1.251/32
