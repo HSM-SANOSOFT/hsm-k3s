@@ -5,6 +5,7 @@ metadata:
   namespace: app
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+    traefik.ingress.kubernetes.io/router.middlewares: app-add-api-prefix@kubernetescrd
 spec:
   ingressClassName: traefik
   tls:
