@@ -23,20 +23,3 @@ spec:
                 name: hsm-be-core-gateway
                 port:
                   number: 3000
-    - host: docs.hospitalsm.org
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: hsm-be-core-storage
-                port:
-                  number: 9000
-          - path: /console
-            pathType: Prefix
-            backend:
-              service:
-                name: hsm-be-core-storage
-                port:
-                  number: 9001

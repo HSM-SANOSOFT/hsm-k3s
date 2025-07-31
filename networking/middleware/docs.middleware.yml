@@ -1,0 +1,9 @@
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: rewrite-s3-prefix
+  namespace: storage
+spec:
+  replacePathRegex:
+    regex: https://docs.hospitalsm.org/
+    replacement: http://minio-tenant-hl.storage.svc.cluster.local:9000/hsm-be-core-docs/

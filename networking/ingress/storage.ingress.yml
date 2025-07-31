@@ -5,6 +5,7 @@ metadata:
   namespace: storage
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+    #traefik.ingress.kubernetes.io/router.middlewares: storage-redirect-to-https@kubernetescrd
 spec:
   ingressClassName: traefik
   tls:
@@ -21,7 +22,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: hsm-be-core-storage
+                name: minio-tenant-hl
                 port:
                   number: 9000
     - host: minio.hospitalsm.org
@@ -31,9 +32,9 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: hsm-be-core-storage
+                name: minio-tenant-console
                 port:
-                  number: 9001
+                  number: 9090
     - host: longhorn.hospitalsm.org
       http:
         paths:

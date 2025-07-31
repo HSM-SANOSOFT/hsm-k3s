@@ -29,7 +29,5 @@ spec:
                 name: hsm-be-core-docs-secret
             - secretRef:
                 name: general-secret
-            - secretRef:
-                name: hsm-be-core-storage-secret
       imagePullSecrets:
         - name: ghcr-login-secret

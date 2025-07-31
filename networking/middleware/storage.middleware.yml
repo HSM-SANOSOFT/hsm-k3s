@@ -1,11 +1,9 @@
 apiVersion: traefik.io/v1alpha1
 kind: Middleware
 metadata:
-  name: remove-console-prefix
+  name: redirect-to-https
   namespace: storage
 spec:
-  stripPrefix:
-    prefixes:
-      - /console/longhorn
-      - /console/minio
-  forceSlash: false
+  redirectScheme:
+    scheme: https
+    permanent: true
