@@ -1,28 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: app-ingress
-  namespace: app
+  name: storage-ingress
+  namespace: storage
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
-    traefik.ingress.kubernetes.io/router.middlewares: app-add-api-prefix@kubernetescrd
 spec:
   ingressClassName: traefik
   tls:
     - hosts:
-        - api.hospitalsm.org
-      secretName: app-tls-secret
+        - docs.hospitalsm.org
+        - minio.hospitalsm.org
+        - longhorn.hospitalsm.org
+      secretName: storage-tls-secret
   rules:
-    - host: api.hospitalsm.org
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: hsm-be-core-gateway
-                port:
-                  number: 3000
     - host: docs.hospitalsm.org
       http:
         paths:
@@ -33,10 +24,23 @@ spec:
                 name: hsm-be-core-storage
                 port:
                   number: 9000
-          - path: /console
+    - host: minio.hospitalsm.org
+      http:
+        paths:
+          - path: /
             pathType: Prefix
             backend:
               service:
                 name: hsm-be-core-storage
                 port:
                   number: 9001
+    - host: longhorn.hospitalsm.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: longhorn-frontend
+                port:
+                  number: 80

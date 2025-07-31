@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: storage-tls
+  namespace: storage
+spec:
+  secretName: storage-tls-secret
+  issuerRef:
+    name: acme
+    kind: ClusterIssuer
+  dnsNames:
+    - docs.hospitalsm.org
+    - minio.hospitalsm.org
+    - longhorn.hospitalsm.org

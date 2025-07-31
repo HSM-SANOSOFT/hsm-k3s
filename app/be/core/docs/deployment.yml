@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hsm-be-core-docs
+  namespace: app
+  labels:
+    app: hsm-be-core-docs
+  annotations:
+    secrets.infisical.com/auto-redeploy: "true"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hsm-be-core-docs
+  template:
+    metadata:
+      labels:
+        app: hsm-be-core-docs
+    spec:
+      containers:
+        - name: hsm-be-core-docs
+          image: ghcr.io/hsm-sanosoft/hsm-be-core-docs:latest
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - configMapRef:
+                name: hsm-be-core-docs-configmap
+            - secretRef:
+                name: hsm-be-core-docs-secret
+            - secretRef:
+                name: general-secret
+            - secretRef:
+                name: hsm-be-core-storage-secret
+      imagePullSecrets:
+        - name: ghcr-login-secret

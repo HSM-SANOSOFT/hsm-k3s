@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hsm-be-core-storage
+  namespace: app
+  labels:
+    app: hsm-be-core-storage
+  annotations:
+    secrets.infisical.com/auto-redeploy: "true"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hsm-be-core-storage
+  template:
+    metadata:
+      labels:
+        app: hsm-be-core-storage
+    spec:
+      containers:
+        - name: hsm-be-core-storage
+          image: quay.io/minio/minio:latest
+          command:
+          - /bin/bash
+          - -c
+          args: 
+          - minio server /data --console-address :9001
+          ports:
+            - containerPort: 9000
+            - containerPort: 9001
+          envFrom:
+            - secretRef:
+                name: hsm-be-core-storage-secret
+            - secretRef:
+                name: general-secret
+          volumeMounts:
+            - name: storage-data
+              mountPath: /data
