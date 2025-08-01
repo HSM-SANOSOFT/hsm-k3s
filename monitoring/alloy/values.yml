@@ -63,6 +63,22 @@ alloy:
           action = "replace"
         }        
       }
+      
+      discovery.kubernetes "kube_state_metrics" {
+        role = "endpoints"
+        selectors {
+          role = "endpoints"
+          field = "metadata.name=kube-state-metrics"
+        }
+      }
+      
+      prometheus.scrape "kube_state_metrics" {
+        targets    = discovery.kubernetes.kube_state_metrics.targets
+        job_name   = "kube-state-metrics"
+        scrape_interval = "30s"
+        forward_to = [prometheus.remote_write.mimir.receiver]
+      }
+            
       prometheus.scrape "metrics" {
         clustering {
             enabled = true

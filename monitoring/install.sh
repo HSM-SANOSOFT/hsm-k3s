@@ -32,7 +32,7 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm install kube-state-metrics prometheus-community/kube-state-metrics -n $NAMESPACE
 
 echo ">>> Installing kube-state-metrics..."
-helm upgrade --install kube-state-metrics prometheus-community/kube-state-metrics -n $NAMESPACE
+helm upgrade --install kube-state-metrics prometheus-community/kube-state-metrics -n $NAMESPACE -f ./kube-state-metrics/values.yml
 
 echo ">>> Installing Grafana Tempo..."
 helm upgrade --install tempo grafana/tempo -n $NAMESPACE -f ./tempo/values.yml
@@ -42,3 +42,5 @@ kubectl apply -f ./grafana/configmap.yml -n $NAMESPACE
 
 echo ">>> Installing Grafana..."
 helm upgrade --install grafana grafana/grafana -n $NAMESPACE -f ./grafana/values.yml
+
+helm upgrade alloy grafana/alloy -n $monitoring -f ./values.yml
