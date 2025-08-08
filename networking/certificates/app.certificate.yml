@@ -10,3 +10,4 @@ spec:
     kind: ClusterIssuer
   dnsNames:
     - api.hospitalsm.org
+    - fhir.hospitalsm.org

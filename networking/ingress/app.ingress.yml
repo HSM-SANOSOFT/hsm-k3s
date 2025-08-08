@@ -11,9 +11,20 @@ spec:
   tls:
     - hosts:
         - api.hospitalsm.org
+        - fhir.hospitalsm.org
       secretName: app-tls-secret
   rules:
     - host: api.hospitalsm.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: hsm-be-core-gateway
+                port:
+                  number: 3000
+    - host: fhir.hospitalsm.org
       http:
         paths:
           - path: /
