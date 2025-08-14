@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hsm-be-his-paciente-configmap
+  namespace: app
+  labels:
+    app: hsm-be-his-paciente
+data:
+  LD_LIBRARY_PATH: /usr/lib/oracle/12.1/client64/lib

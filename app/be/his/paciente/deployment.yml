@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hsm-be-his-paciente
+  namespace: app
+  labels:
+    app: hsm-be-his-paciente
+  annotations:
+    secrets.infisical.com/auto-redeploy: "true"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hsm-be-his-paciente
+  template:
+    metadata:
+      labels:
+        app: hsm-be-his-paciente
+    spec:
+      containers:
+        - name: hsm-be-his-paciente
+          image: ghcr.io/hsm-sanosoft/hsm-be-his-paciente:latest
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - configMapRef:
+                name: hsm-be-his-paciente-configmap
+            - secretRef:
+                name: hsm-be-his-paciente-secret
+            - secretRef:
+                name: general-secret
+      imagePullSecrets:
+        - name: ghcr-login-secret

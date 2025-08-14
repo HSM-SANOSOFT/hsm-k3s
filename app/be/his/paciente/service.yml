@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hsm-be-his-paciente
+  namespace: app
+  labels:
+    app: hsm-be-his-paciente
+spec:
+  type: ClusterIP
+  selector:
+    app: hsm-be-his-paciente
+  ports:
+    - name: tcp
+      port: 3000                
+      targetPort: 3000
+      protocol: TCP           
