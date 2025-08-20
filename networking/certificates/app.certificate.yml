@@ -11,3 +11,4 @@ spec:
   dnsNames:
     - api.hospitalsm.org
     - fhir.hospitalsm.org
+    - webhook.hospitalsm.org
