@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hsm-security-cams
+  namespace: security
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hsm-security-cams
+  template:
+    metadata:
+      labels:
+        app: hsm-security-cams
+    spec:
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
+      securityContext:
+        fsGroup: 1000
+      containers:
+        - name: ispyagentdvr
+          image: mekayelanik/ispyagentdvr:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8090
+              protocol: TCP
+            - name: stun
+              containerPort: 3478
+              protocol: UDP
+          env:
+            - name: PUID
+              value: "1000"
+            - name: PGID
+              value: "1000"
+            - name: AGENTDVR_WEBUI_PORT
+              value: "8090"
+            - name: TZ
+              value: "America/Guayaquil"
+          volumeMounts:
+            - name: config
+              mountPath: /AgentDVR/Media/XML
+            - name: recordings
+              mountPath: /AgentDVR/Media/Recordings
+            - name: commands
+              mountPath: /AgentDVR/Commands
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "512Mi"
+            limits:
+              cpu: "2"
+              memory: "4Gi"
+
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: hsm-security-cams-config-pvc
+        - name: recordings
+          persistentVolumeClaim:
+            claimName: hsm-security-cams-recordings-pvc
+        - name: commands
+          persistentVolumeClaim:
+            claimName: hsm-security-cams-commands-pvc
