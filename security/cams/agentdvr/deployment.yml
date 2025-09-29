@@ -51,9 +51,11 @@ spec:
               mountPath: /AgentDVR/Commands
           resources:
             requests:
-              memory: "8Gi"
+              cpu: "10"
+              memory: "4Gi"
             limits:
-              memory: "16Gi"
+              cpu: "20"
+              memory: "8Gi"
 
       volumes:
         - name: config
