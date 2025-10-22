@@ -10,3 +10,4 @@ spec:
     kind: ClusterIssuer
   dnsNames:
     - cams.hospitalsm.org
+    - vault.hospitalsm.org

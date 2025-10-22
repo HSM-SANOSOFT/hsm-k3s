@@ -10,6 +10,7 @@ spec:
   tls:
     - hosts:
         - cams.hospitalsm.org
+        - vault.hospitalsm.org
       secretName: security-tls-secret
   rules:
     - host: cams.hospitalsm.org
@@ -22,3 +23,13 @@ spec:
                 name: hsm-security-cams
                 port:
                   number: 80
+    - host: vault.hospitalsm.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: infisical-infisical-standalone-infisical
+                port:
+                  number: 8080
