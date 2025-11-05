@@ -12,3 +12,7 @@ spec:
       port: 80
       targetPort: 8090
       protocol: TCP
+    - name: udp
+      port: 3478
+      targetPort: 3478
+      protocol: UDP
