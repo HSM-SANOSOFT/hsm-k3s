@@ -12,3 +12,5 @@ spec:
     - api.hospitalsm.org
     - fhir.hospitalsm.org
     - webhook.hospitalsm.org
+    - openrouter.hospitalsm.org
+    - openrouter-2.hospitalsm.org

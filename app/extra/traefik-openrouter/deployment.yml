@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traefik-openrouter
+  namespace: app
+  labels:
+    app: traefik-openrouter
+  annotations:
+    secrets.infisical.com/auto-redeploy: "true"
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  progressDeadlineSeconds: 600
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: traefik-openrouter
+  template:
+    metadata:
+      labels:
+        app: traefik-openrouter
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: traefik-openrouter
+          image: ghcr.io/rsantamaria01/traefik-openrouter:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8787
+            - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: traefik-openrouter-secret
+            - secretRef:
+                name: general-secret
+          env:
+            - name: TRAEFIK_PING
+              value: "true"
+            - name: TRAEFIK_PING_ENTRYPOINT
+              value: "web"
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
+      imagePullSecrets:
+        - name: ghcr-login-secret

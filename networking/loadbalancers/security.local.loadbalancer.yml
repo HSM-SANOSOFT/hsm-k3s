@@ -8,10 +8,64 @@ metadata:
 spec:
   type: LoadBalancer
   loadBalancerIP: 10.1.1.252
+  externalTrafficPolicy: Local
   selector:
     app: hsm-security-cams
   ports:
+    # HTTP / UI
     - name: http
       port: 80
       targetPort: 8090
       protocol: TCP
+
+    # STUN/TURN control
+    - name: stun-udp
+      port: 3478
+      targetPort: 3478
+      protocol: UDP
+
+    # WebRTC media (open as many as you need; expand up to 50100 if required)
+    - name: webrtc-50000
+      port: 50000
+      targetPort: 50000
+      protocol: UDP
+    - name: webrtc-50001
+      port: 50001
+      targetPort: 50001
+      protocol: UDP
+    - name: webrtc-50002
+      port: 50002
+      targetPort: 50002
+      protocol: UDP
+    - name: webrtc-50003
+      port: 50003
+      targetPort: 50003
+      protocol: UDP
+    - name: webrtc-50004
+      port: 50004
+      targetPort: 50004
+      protocol: UDP
+    - name: webrtc-50005
+      port: 50005
+      targetPort: 50005
+      protocol: UDP
+    - name: webrtc-50006
+      port: 50006
+      targetPort: 50006
+      protocol: UDP
+    - name: webrtc-50007
+      port: 50007
+      targetPort: 50007
+      protocol: UDP
+    - name: webrtc-50008
+      port: 50008
+      targetPort: 50008
+      protocol: UDP
+    - name: webrtc-50009
+      port: 50009
+      targetPort: 50009
+      protocol: UDP
+    - name: webrtc-50010
+      port: 50010
+      targetPort: 50010
+      protocol: UDP

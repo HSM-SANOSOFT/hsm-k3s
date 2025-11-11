@@ -12,7 +12,79 @@ spec:
       port: 80
       targetPort: 8090
       protocol: TCP
-    - name: udp
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: agentdvr-udp
+  namespace: security
+spec:
+  type: NodePort
+  externalTrafficPolicy: Cluster
+  selector:
+    app: hsm-security-cams
+  ports:
+    # STUN/TURN control
+    - name: stun-3478
       port: 3478
       targetPort: 3478
+      nodePort: 32478
+      protocol: UDP
+
+    # WebRTC media (UDP 50000–50010)
+    - name: webrtc-50000
+      port: 50000
+      targetPort: 50000
+      nodePort: 32000
+      protocol: UDP
+    - name: webrtc-50001
+      port: 50001
+      targetPort: 50001
+      nodePort: 32001
+      protocol: UDP
+    - name: webrtc-50002
+      port: 50002
+      targetPort: 50002
+      nodePort: 32002
+      protocol: UDP
+    - name: webrtc-50003
+      port: 50003
+      targetPort: 50003
+      nodePort: 32003
+      protocol: UDP
+    - name: webrtc-50004
+      port: 50004
+      targetPort: 50004
+      nodePort: 32004
+      protocol: UDP
+    - name: webrtc-50005
+      port: 50005
+      targetPort: 50005
+      nodePort: 32005
+      protocol: UDP
+    - name: webrtc-50006
+      port: 50006
+      targetPort: 50006
+      nodePort: 32006
+      protocol: UDP
+    - name: webrtc-50007
+      port: 50007
+      targetPort: 50007
+      nodePort: 32007
+      protocol: UDP
+    - name: webrtc-50008
+      port: 50008
+      targetPort: 50008
+      nodePort: 32008
+      protocol: UDP
+    - name: webrtc-50009
+      port: 50009
+      targetPort: 50009
+      nodePort: 32009
+      protocol: UDP
+    - name: webrtc-50010
+      port: 50010
+      targetPort: 50010
+      nodePort: 32010
       protocol: UDP

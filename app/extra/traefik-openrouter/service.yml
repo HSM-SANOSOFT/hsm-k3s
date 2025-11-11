@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: traefik-openrouter
+  namespace: app
+  labels:
+    app: traefik-openrouter
+spec:
+  type: ClusterIP
+  selector:
+    app: traefik-openrouter
+  ports:
+    - name: tcp-8080
+      port: 8080
+      targetPort: 8080
+      protocol: TCP
+    - name: tcp-8787
+      port: 8787
+      targetPort: 8787
+      protocol: TCP
