@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hsm-security-cams-shinobi-lb
+  name: hsm-security-cams-frigate-lb
   namespace: security
   annotations:
     metallb.universe.tf/address-pool: vip-pool
@@ -9,8 +9,8 @@ spec:
   type: LoadBalancer
   loadBalancerIP: 10.1.1.253
   selector:
-    app: hsm-security-cams-shinobi
+    app: hsm-security-cams-frigate
   ports:
     - name: http
       port: 80
-      targetPort: 8080
+      targetPort: 8971

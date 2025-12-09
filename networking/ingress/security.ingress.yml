@@ -20,7 +20,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: hsm-security-cams
+                name: hsm-security-cams-frigate
                 port:
                   number: 80
     - host: vault.hospitalsm.org

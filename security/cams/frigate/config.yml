@@ -1,0 +1,2621 @@
+auth:
+  reset_admin_password: true
+birdseye:
+  enabled: false
+mqtt:
+  enabled: false
+detect:
+  enabled: false
+record:
+  enabled: false
+audio:
+  enabled: false
+logger:
+  default: debug
+detectors:
+  cpu1:
+    type: cpu
+tls:
+  enabled: false
+cameras:
+  ip_101119_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0102
+        roles:
+        - detect
+    ui:
+      order: 1
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0202
+        roles:
+        - detect
+    ui:
+      order: 2
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_003:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0302
+        roles:
+        - detect
+    ui:
+      order: 3
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_004:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0402
+        roles:
+        - detect
+    ui:
+      order: 4
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_005:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0502
+        roles:
+        - detect
+    ui:
+      order: 5
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_006:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0602
+        roles:
+        - detect
+    ui:
+      order: 6
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_007:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0702
+        roles:
+        - detect
+    ui:
+      order: 7
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_008:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0802
+        roles:
+        - detect
+    ui:
+      order: 8
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_009:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0902
+        roles:
+        - detect
+    ui:
+      order: 9
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_010:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/1002
+        roles:
+        - detect
+    ui:
+      order: 10
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_011:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/1102
+        roles:
+        - detect
+    ui:
+      order: 11
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_012:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/1202
+        roles:
+        - detect
+    ui:
+      order: 12
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_013:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/1302
+        roles:
+        - detect
+    ui:
+      order: 13
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_014:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/1402
+        roles:
+        - detect
+    ui:
+      order: 14
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_015:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/1502
+        roles:
+        - detect
+    ui:
+      order: 15
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101119_cam_016:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/1602
+        roles:
+        - detect
+    ui:
+      order: 16
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0102
+        roles:
+        - detect
+    ui:
+      order: 17
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0202
+        roles:
+        - detect
+    ui:
+      order: 18
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_003:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0302
+        roles:
+        - detect
+    ui:
+      order: 19
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_004:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0402
+        roles:
+        - detect
+    ui:
+      order: 20
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_005:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0502
+        roles:
+        - detect
+    ui:
+      order: 21
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_006:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0602
+        roles:
+        - detect
+    ui:
+      order: 22
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_007:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0702
+        roles:
+        - detect
+    ui:
+      order: 23
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_008:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0802
+        roles:
+        - detect
+    ui:
+      order: 24
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_009:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0902
+        roles:
+        - detect
+    ui:
+      order: 25
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_010:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/1002
+        roles:
+        - detect
+    ui:
+      order: 26
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_011:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/1102
+        roles:
+        - detect
+    ui:
+      order: 27
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_012:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/1202
+        roles:
+        - detect
+    ui:
+      order: 28
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_013:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/1302
+        roles:
+        - detect
+    ui:
+      order: 29
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_014:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/1402
+        roles:
+        - detect
+    ui:
+      order: 30
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_015:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/1502
+        roles:
+        - detect
+    ui:
+      order: 31
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_016:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/1602
+        roles:
+        - detect
+    ui:
+      order: 32
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0102
+        roles:
+        - detect
+    ui:
+      order: 33
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0202
+        roles:
+        - detect
+    ui:
+      order: 34
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_003:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0302
+        roles:
+        - detect
+    ui:
+      order: 35
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_004:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0402
+        roles:
+        - detect
+    ui:
+      order: 36
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_005:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0502
+        roles:
+        - detect
+    ui:
+      order: 37
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_006:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0602
+        roles:
+        - detect
+    ui:
+      order: 38
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_007:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0702
+        roles:
+        - detect
+    ui:
+      order: 39
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_008:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0802
+        roles:
+        - detect
+    ui:
+      order: 40
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_009:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0902
+        roles:
+        - detect
+    ui:
+      order: 41
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_010:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/1002
+        roles:
+        - detect
+    ui:
+      order: 42
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_011:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/1102
+        roles:
+        - detect
+    ui:
+      order: 43
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_012:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/1202
+        roles:
+        - detect
+    ui:
+      order: 44
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_013:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/1302
+        roles:
+        - detect
+    ui:
+      order: 45
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_014:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/1402
+        roles:
+        - detect
+    ui:
+      order: 46
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_015:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/1502
+        roles:
+        - detect
+    ui:
+      order: 47
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_016:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/1602
+        roles:
+        - detect
+    ui:
+      order: 48
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/0102
+        roles:
+        - detect
+    ui:
+      order: 49
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/0202
+        roles:
+        - detect
+    ui:
+      order: 50
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_003:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/0302
+        roles:
+        - detect
+    ui:
+      order: 51
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_004:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/0402
+        roles:
+        - detect
+    ui:
+      order: 52
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_005:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/0502
+        roles:
+        - detect
+    ui:
+      order: 53
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_006:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/0602
+        roles:
+        - detect
+    ui:
+      order: 54
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_007:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/0702
+        roles:
+        - detect
+    ui:
+      order: 55
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_008:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/0802
+        roles:
+        - detect
+    ui:
+      order: 56
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_009:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/0902
+        roles:
+        - detect
+    ui:
+      order: 57
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_010:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/1002
+        roles:
+        - detect
+    ui:
+      order: 58
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_011:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/1102
+        roles:
+        - detect
+    ui:
+      order: 59
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_012:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/1202
+        roles:
+        - detect
+    ui:
+      order: 60
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_013:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/1302
+        roles:
+        - detect
+    ui:
+      order: 61
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_014:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/1402
+        roles:
+        - detect
+    ui:
+      order: 62
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_015:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/1502
+        roles:
+        - detect
+    ui:
+      order: 63
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101150_cam_016:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.50:554/Streaming/Channels/1602
+        roles:
+        - detect
+    ui:
+      order: 64
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0102
+        roles:
+        - detect
+    ui:
+      order: 65
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0202
+        roles:
+        - detect
+    ui:
+      order: 66
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_003:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0302
+        roles:
+        - detect
+    ui:
+      order: 67
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_004:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0402
+        roles:
+        - detect
+    ui:
+      order: 68
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_005:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0502
+        roles:
+        - detect
+    ui:
+      order: 69
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_006:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0602
+        roles:
+        - detect
+    ui:
+      order: 70
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_007:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0702
+        roles:
+        - detect
+    ui:
+      order: 71
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_008:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0802
+        roles:
+        - detect
+    ui:
+      order: 72
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_009:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0902
+        roles:
+        - detect
+    ui:
+      order: 73
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_010:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/1002
+        roles:
+        - detect
+    ui:
+      order: 74
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_011:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/1102
+        roles:
+        - detect
+    ui:
+      order: 75
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_012:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/1202
+        roles:
+        - detect
+    ui:
+      order: 76
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_013:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/1302
+        roles:
+        - detect
+    ui:
+      order: 77
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_014:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/1402
+        roles:
+        - detect
+    ui:
+      order: 78
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_015:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/1502
+        roles:
+        - detect
+    ui:
+      order: 79
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_016:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/1602
+        roles:
+        - detect
+    ui:
+      order: 80
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/0102
+        roles:
+        - detect
+    ui:
+      order: 81
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/0202
+        roles:
+        - detect
+    ui:
+      order: 82
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_003:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/0302
+        roles:
+        - detect
+    ui:
+      order: 83
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_004:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/0402
+        roles:
+        - detect
+    ui:
+      order: 84
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_005:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/0502
+        roles:
+        - detect
+    ui:
+      order: 85
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_006:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/0602
+        roles:
+        - detect
+    ui:
+      order: 86
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_007:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/0702
+        roles:
+        - detect
+    ui:
+      order: 87
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_008:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/0802
+        roles:
+        - detect
+    ui:
+      order: 88
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_009:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/0902
+        roles:
+        - detect
+    ui:
+      order: 89
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_010:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/1002
+        roles:
+        - detect
+    ui:
+      order: 90
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_011:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/1102
+        roles:
+        - detect
+    ui:
+      order: 91
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_012:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/1202
+        roles:
+        - detect
+    ui:
+      order: 92
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_013:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/1302
+        roles:
+        - detect
+    ui:
+      order: 93
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_014:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/1402
+        roles:
+        - detect
+    ui:
+      order: 94
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_015:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/1502
+        roles:
+        - detect
+    ui:
+      order: 95
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20113_cam_016:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.3:554/Streaming/Channels/1602
+        roles:
+        - detect
+    ui:
+      order: 96
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/0102
+        roles:
+        - detect
+    ui:
+      order: 97
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/0202
+        roles:
+        - detect
+    ui:
+      order: 98
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_003:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/0302
+        roles:
+        - detect
+    ui:
+      order: 99
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_004:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/0402
+        roles:
+        - detect
+    ui:
+      order: 100
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_005:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/0502
+        roles:
+        - detect
+    ui:
+      order: 101
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_006:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/0602
+        roles:
+        - detect
+    ui:
+      order: 102
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_007:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/0702
+        roles:
+        - detect
+    ui:
+      order: 103
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_008:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/0802
+        roles:
+        - detect
+    ui:
+      order: 104
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_009:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/0902
+        roles:
+        - detect
+    ui:
+      order: 105
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_010:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/1002
+        roles:
+        - detect
+    ui:
+      order: 106
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_011:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/1102
+        roles:
+        - detect
+    ui:
+      order: 107
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_012:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/1202
+        roles:
+        - detect
+    ui:
+      order: 108
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_013:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/1302
+        roles:
+        - detect
+    ui:
+      order: 109
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_014:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/1402
+        roles:
+        - detect
+    ui:
+      order: 110
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_015:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/1502
+        roles:
+        - detect
+    ui:
+      order: 111
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20114_cam_016:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.4:554/Streaming/Channels/1602
+        roles:
+        - detect
+    ui:
+      order: 112
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/0102
+        roles:
+        - detect
+    ui:
+      order: 113
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/0202
+        roles:
+        - detect
+    ui:
+      order: 114
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_003:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/0302
+        roles:
+        - detect
+    ui:
+      order: 115
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_004:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/0402
+        roles:
+        - detect
+    ui:
+      order: 116
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_005:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/0502
+        roles:
+        - detect
+    ui:
+      order: 117
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_006:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/0602
+        roles:
+        - detect
+    ui:
+      order: 118
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_007:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/0702
+        roles:
+        - detect
+    ui:
+      order: 119
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_008:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/0802
+        roles:
+        - detect
+    ui:
+      order: 120
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_009:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/0902
+        roles:
+        - detect
+    ui:
+      order: 121
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_010:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/1002
+        roles:
+        - detect
+    ui:
+      order: 122
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_011:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/1102
+        roles:
+        - detect
+    ui:
+      order: 123
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_012:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/1202
+        roles:
+        - detect
+    ui:
+      order: 124
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_013:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/1302
+        roles:
+        - detect
+    ui:
+      order: 125
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_014:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/1402
+        roles:
+        - detect
+    ui:
+      order: 126
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_015:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/1502
+        roles:
+        - detect
+    ui:
+      order: 127
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20115_cam_016:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.5:554/Streaming/Channels/1602
+        roles:
+        - detect
+    ui:
+      order: 128
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/0102
+        roles:
+        - detect
+    ui:
+      order: 129
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/0202
+        roles:
+        - detect
+    ui:
+      order: 130
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_003:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/0302
+        roles:
+        - detect
+    ui:
+      order: 131
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_004:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/0402
+        roles:
+        - detect
+    ui:
+      order: 132
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_005:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/0502
+        roles:
+        - detect
+    ui:
+      order: 133
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_006:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/0602
+        roles:
+        - detect
+    ui:
+      order: 134
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_007:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/0702
+        roles:
+        - detect
+    ui:
+      order: 135
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_008:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/0802
+        roles:
+        - detect
+    ui:
+      order: 136
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_009:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/0902
+        roles:
+        - detect
+    ui:
+      order: 137
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_010:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/1002
+        roles:
+        - detect
+    ui:
+      order: 138
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_011:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/1102
+        roles:
+        - detect
+    ui:
+      order: 139
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_012:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/1202
+        roles:
+        - detect
+    ui:
+      order: 140
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_013:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/1302
+        roles:
+        - detect
+    ui:
+      order: 141
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_014:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/1402
+        roles:
+        - detect
+    ui:
+      order: 142
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_015:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/1502
+        roles:
+        - detect
+    ui:
+      order: 143
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20116_cam_016:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.6:554/Streaming/Channels/1602
+        roles:
+        - detect
+    ui:
+      order: 144
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/0102
+        roles:
+        - detect
+    ui:
+      order: 145
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/0202
+        roles:
+        - detect
+    ui:
+      order: 146
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_003:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/0302
+        roles:
+        - detect
+    ui:
+      order: 147
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_004:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/0402
+        roles:
+        - detect
+    ui:
+      order: 148
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_005:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/0502
+        roles:
+        - detect
+    ui:
+      order: 149
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_006:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/0602
+        roles:
+        - detect
+    ui:
+      order: 150
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_007:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/0702
+        roles:
+        - detect
+    ui:
+      order: 151
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_008:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/0802
+        roles:
+        - detect
+    ui:
+      order: 152
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_009:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/0902
+        roles:
+        - detect
+    ui:
+      order: 153
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_010:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/1002
+        roles:
+        - detect
+    ui:
+      order: 154
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_011:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/1102
+        roles:
+        - detect
+    ui:
+      order: 155
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_012:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/1202
+        roles:
+        - detect
+    ui:
+      order: 156
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_013:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/1302
+        roles:
+        - detect
+    ui:
+      order: 157
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_014:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/1402
+        roles:
+        - detect
+    ui:
+      order: 158
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_015:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/1502
+        roles:
+        - detect
+    ui:
+      order: 159
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_201118_cam_016:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.18:554/Streaming/Channels/1602
+        roles:
+        - detect
+    ui:
+      order: 160
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+camera_groups:
+  ip_101119:
+    order: 1
+    icon: LuAirplay
+    cameras:
+    - ip_101119_cam_001
+    - ip_101119_cam_002
+    - ip_101119_cam_003
+    - ip_101119_cam_004
+    - ip_101119_cam_005
+    - ip_101119_cam_006
+    - ip_101119_cam_007
+    - ip_101119_cam_008
+    - ip_101119_cam_009
+    - ip_101119_cam_010
+    - ip_101119_cam_011
+    - ip_101119_cam_012
+    - ip_101119_cam_013
+    - ip_101119_cam_014
+    - ip_101119_cam_015
+    - ip_101119_cam_016
+  ip_101124:
+    order: 2
+    icon: LuAirplay
+    cameras:
+    - ip_101124_cam_001
+    - ip_101124_cam_002
+    - ip_101124_cam_003
+    - ip_101124_cam_004
+    - ip_101124_cam_005
+    - ip_101124_cam_006
+    - ip_101124_cam_007
+    - ip_101124_cam_008
+    - ip_101124_cam_009
+    - ip_101124_cam_010
+    - ip_101124_cam_011
+    - ip_101124_cam_012
+    - ip_101124_cam_013
+    - ip_101124_cam_014
+    - ip_101124_cam_015
+    - ip_101124_cam_016
+  ip_101139:
+    order: 3
+    icon: LuAirplay
+    cameras:
+    - ip_101139_cam_001
+    - ip_101139_cam_002
+    - ip_101139_cam_003
+    - ip_101139_cam_004
+    - ip_101139_cam_005
+    - ip_101139_cam_006
+    - ip_101139_cam_007
+    - ip_101139_cam_008
+    - ip_101139_cam_009
+    - ip_101139_cam_010
+    - ip_101139_cam_011
+    - ip_101139_cam_012
+    - ip_101139_cam_013
+    - ip_101139_cam_014
+    - ip_101139_cam_015
+    - ip_101139_cam_016
+  ip_101150:
+    order: 4
+    icon: LuAirplay
+    cameras:
+    - ip_101150_cam_001
+    - ip_101150_cam_002
+    - ip_101150_cam_003
+    - ip_101150_cam_004
+    - ip_101150_cam_005
+    - ip_101150_cam_006
+    - ip_101150_cam_007
+    - ip_101150_cam_008
+    - ip_101150_cam_009
+    - ip_101150_cam_010
+    - ip_101150_cam_011
+    - ip_101150_cam_012
+    - ip_101150_cam_013
+    - ip_101150_cam_014
+    - ip_101150_cam_015
+    - ip_101150_cam_016
+  ip_20112:
+    order: 5
+    icon: LuAirplay
+    cameras:
+    - ip_20112_cam_001
+    - ip_20112_cam_002
+    - ip_20112_cam_003
+    - ip_20112_cam_004
+    - ip_20112_cam_005
+    - ip_20112_cam_006
+    - ip_20112_cam_007
+    - ip_20112_cam_008
+    - ip_20112_cam_009
+    - ip_20112_cam_010
+    - ip_20112_cam_011
+    - ip_20112_cam_012
+    - ip_20112_cam_013
+    - ip_20112_cam_014
+    - ip_20112_cam_015
+    - ip_20112_cam_016
+  ip_20113:
+    order: 6
+    icon: LuAirplay
+    cameras:
+    - ip_20113_cam_001
+    - ip_20113_cam_002
+    - ip_20113_cam_003
+    - ip_20113_cam_004
+    - ip_20113_cam_005
+    - ip_20113_cam_006
+    - ip_20113_cam_007
+    - ip_20113_cam_008
+    - ip_20113_cam_009
+    - ip_20113_cam_010
+    - ip_20113_cam_011
+    - ip_20113_cam_012
+    - ip_20113_cam_013
+    - ip_20113_cam_014
+    - ip_20113_cam_015
+    - ip_20113_cam_016
+  ip_20114:
+    order: 7
+    icon: LuAirplay
+    cameras:
+    - ip_20114_cam_001
+    - ip_20114_cam_002
+    - ip_20114_cam_003
+    - ip_20114_cam_004
+    - ip_20114_cam_005
+    - ip_20114_cam_006
+    - ip_20114_cam_007
+    - ip_20114_cam_008
+    - ip_20114_cam_009
+    - ip_20114_cam_010
+    - ip_20114_cam_011
+    - ip_20114_cam_012
+    - ip_20114_cam_013
+    - ip_20114_cam_014
+    - ip_20114_cam_015
+    - ip_20114_cam_016
+  ip_20115:
+    order: 8
+    icon: LuAirplay
+    cameras:
+    - ip_20115_cam_001
+    - ip_20115_cam_002
+    - ip_20115_cam_003
+    - ip_20115_cam_004
+    - ip_20115_cam_005
+    - ip_20115_cam_006
+    - ip_20115_cam_007
+    - ip_20115_cam_008
+    - ip_20115_cam_009
+    - ip_20115_cam_010
+    - ip_20115_cam_011
+    - ip_20115_cam_012
+    - ip_20115_cam_013
+    - ip_20115_cam_014
+    - ip_20115_cam_015
+    - ip_20115_cam_016
+  ip_20116:
+    order: 9
+    icon: LuAirplay
+    cameras:
+    - ip_20116_cam_001
+    - ip_20116_cam_002
+    - ip_20116_cam_003
+    - ip_20116_cam_004
+    - ip_20116_cam_005
+    - ip_20116_cam_006
+    - ip_20116_cam_007
+    - ip_20116_cam_008
+    - ip_20116_cam_009
+    - ip_20116_cam_010
+    - ip_20116_cam_011
+    - ip_20116_cam_012
+    - ip_20116_cam_013
+    - ip_20116_cam_014
+    - ip_20116_cam_015
+    - ip_20116_cam_016
+  ip_201118:
+    order: 10
+    icon: LuAirplay
+    cameras:
+    - ip_201118_cam_001
+    - ip_201118_cam_002
+    - ip_201118_cam_003
+    - ip_201118_cam_004
+    - ip_201118_cam_005
+    - ip_201118_cam_006
+    - ip_201118_cam_007
+    - ip_201118_cam_008
+    - ip_201118_cam_009
+    - ip_201118_cam_010
+    - ip_201118_cam_011
+    - ip_201118_cam_012
+    - ip_201118_cam_013
+    - ip_201118_cam_014
+    - ip_201118_cam_015
+    - ip_201118_cam_016

@@ -1,0 +1,99 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hsm-security-cams-frigate
+  namespace: security
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 0
+  selector:
+    matchLabels:
+      app: hsm-security-cams-frigate
+  template:
+    metadata:
+      labels:
+        app: hsm-security-cams-frigate
+    spec:
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
+
+      initContainers:
+        - name: copyconfig
+          image: ghcr.io/blakeblackshear/frigate:stable
+          imagePullPolicy: IfNotPresent
+          command: [ "cp" ]
+          args: ["-v", "/source/config.yml", "/config/config.yml"]
+          volumeMounts:
+            - name: config
+              mountPath: /config
+            - name: config-source
+              mountPath: /source
+
+      containers:
+        - name: frigate
+          image: ghcr.io/blakeblackshear/frigate:stable
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - name: ui-auth
+              containerPort: 8971
+              protocol: TCP
+            - name: ui-internal
+              containerPort: 5000
+              protocol: TCP
+            - name: rtsp
+              containerPort: 8554
+              protocol: TCP
+            - name: webrtc-tcp
+              containerPort: 8555
+              protocol: TCP
+            - name: webrtc-udp
+              containerPort: 8555
+              protocol: UDP
+
+          envFrom:
+            - secretRef:
+                name: hsm-security-cams-frigate-secret
+
+          volumeMounts:
+            - name: config
+              mountPath: /config
+            - name: media
+              mountPath: /media
+            - name: tmp
+              mountPath: /tmp
+            - name: dshm
+              mountPath: /dev/shm
+
+          resources:
+            requests:
+              cpu: "12"
+              memory: "12Gi"
+            limits:
+              cpu: "24"
+              memory: "24Gi"
+
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: hsm-security-cams-frigate-config-pvc
+
+        - name: config-source
+          configMap:
+            name: hsm-security-cams-frigate-configmap
+
+        - name: media
+          persistentVolumeClaim:
+            claimName: hsm-security-cams-frigate-media-pvc
+        - name: tmp
+          emptyDir:
+            medium: Memory
+            sizeLimit: "2Gi"
+        - name: dshm
+          emptyDir:
+            medium: Memory
+            sizeLimit: "12Gi"
