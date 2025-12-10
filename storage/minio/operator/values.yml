@@ -21,10 +21,10 @@ operator:
   env:
     - name: OPERATOR_STS_ENABLED
       value: "on"
-      
-  envFrom: 
+
+  envFrom:
     - secretRef:
-        name: hsm-be-core-storage-operator-secret
+        name: hsm-storage-minio-tenant-secret
   # An array of additional annotations to be applied to the operator service account
   serviceAccountAnnotations: []
   # additional labels to be applied to operator resources
