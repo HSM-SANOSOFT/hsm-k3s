@@ -1,16 +1,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hsm-security-cams-frigate-lb
+  name: hsm-security-vault-lb
   namespace: security
   annotations:
     metallb.universe.tf/address-pool: vip-pool
 spec:
   type: LoadBalancer
-  loadBalancerIP: 10.1.1.253
+  loadBalancerIP: 10.1.1.252
   selector:
-    app: hsm-security-cams-frigate
+    app: infisical-standalone
+    component: infisical
+    release: infisical
   ports:
     - name: http
       port: 80
-      targetPort: 8971
+      targetPort: 8080
+      protocol: TCP

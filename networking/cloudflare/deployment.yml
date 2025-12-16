@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hsm-networking-cloudflare
+  namespace: networking
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hsm-networking-cloudflare
+  template:
+    metadata:
+      labels:
+        app: hsm-networking-cloudflare
+    spec:
+      containers:
+        - name: hsm-networking-cloudflare
+          image: cloudflare/cloudflared:latest
+          args: ["tunnel", "--no-autoupdate", "--protocol", "http2", "run"]
+          env:
+            - name: TUNNEL_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hsm-networking-cloudflare-secret
+                  key: TUNNEL_TOKEN
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 200m
+              memory: 256Mi
