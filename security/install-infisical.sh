@@ -25,4 +25,4 @@ kubectl patch serviceaccount infisical-service-account -p '{"secrets": [{"name":
 kubectl get secret infisical-token-reviewer-token -n $NAMESPACE -o=jsonpath='{.data.token}' | base64 --decode
 
 echo ">>> Installing Infisical Helm chart..."
-helm upgrade --install infisical infisical-helm-charts/infisical-standalone --values ./infisical/values.yml -n $NAMESPACE
+helm upgrade --install infisical infisical-helm-charts/infisical-standalone --values ./infisical/values.yml -n security

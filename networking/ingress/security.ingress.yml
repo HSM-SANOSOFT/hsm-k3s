@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: security-ingress
+  name: security-ingress-cams
   namespace: security
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
@@ -10,7 +10,6 @@ spec:
   tls:
     - hosts:
         - cams.hospitalsm.org
-        - vault.hospitalsm.org
       secretName: security-tls-secret
   rules:
     - host: cams.hospitalsm.org
@@ -20,9 +19,25 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: hsm-security-cams-frigate
+                name: hsm-security-cams-frigate-ui
                 port:
                   number: 80
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: security-ingress-vault
+  namespace: security
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+spec:
+  ingressClassName: traefik
+  tls:
+    - hosts:
+        - vault.hospitalsm.org
+      secretName: security-tls-secret
+  rules:
     - host: vault.hospitalsm.org
       http:
         paths:

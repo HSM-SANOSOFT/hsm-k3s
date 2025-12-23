@@ -1,0 +1,10 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: hsm-security-cams-frigate-pdb
+  namespace: security
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: hsm-security-cams-frigate
