@@ -385,7 +385,7 @@ loki:
       {{- tpl (. | toYaml) $ | nindent 4 }}
     {{- end }}
   # Should authentication be enabled
-  auth_enabled: true
+  auth_enabled: false
   # -- memberlist configuration (overrides embedded default)
   memberlistConfig: {}
   # -- Extra memberlist configuration
@@ -440,12 +440,12 @@ loki:
     s3:
       s3: null
       region: us-east-1
-      endpoint: ${S3_ENDPOINT}
+      endpoint: ${S3_HOST}
       accessKeyId: ${ACCESS_KEY}
-      secretAccessKey: ${SECRET_ACCESS_KEY}
-      signatureVersion: null
+      secretAccessKey: ${SECRET_KEY}
+      signatureVersion: v4
       s3ForcePathStyle: true
-      insecure: false
+      insecure: true
       http_config: {}
       # -- Check https://grafana.com/docs/loki/latest/configure/#s3_storage_config for more info on how to provide a backoff_config
       backoff_config: {}

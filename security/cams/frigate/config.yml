@@ -1,5 +1,5 @@
 auth:
-  reset_admin_password: false
+  reset_admin_password: true
 birdseye:
   enabled: false
 mqtt:
@@ -18,13 +18,13 @@ detectors:
 tls:
   enabled: false
 cameras:
-  ip_101139_cam_001:
+  ip_101119_cam_001:
     enabled: true
     type: generic
     ffmpeg:
       apple_compatibility: true
       inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0101
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0102
         roles:
         - detect
     ui:
@@ -33,13 +33,13 @@ cameras:
     best_image_timeout: 60
     detect:
       enabled: false
-  ip_101139_cam_002:
+  ip_101119_cam_002:
     enabled: true
     type: generic
     ffmpeg:
       apple_compatibility: true
       inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0201
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0202
         roles:
         - detect
     ui:
@@ -48,13 +48,13 @@ cameras:
     best_image_timeout: 60
     detect:
       enabled: false
-  ip_101139_cam_003:
+  ip_101119_cam_003:
     enabled: true
     type: generic
     ffmpeg:
       apple_compatibility: true
       inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0301
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0301
         roles:
         - detect
     ui:
@@ -63,13 +63,13 @@ cameras:
     best_image_timeout: 60
     detect:
       enabled: false
-  ip_101139_cam_004:
+  ip_101119_cam_004:
     enabled: true
     type: generic
     ffmpeg:
       apple_compatibility: true
       inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0401
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0402
         roles:
         - detect
     ui:
@@ -78,13 +78,13 @@ cameras:
     best_image_timeout: 60
     detect:
       enabled: false
-  ip_101139_cam_005:
+  ip_101119_cam_005:
     enabled: true
     type: generic
     ffmpeg:
       apple_compatibility: true
       inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0501
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0501
         roles:
         - detect
     ui:
@@ -93,13 +93,13 @@ cameras:
     best_image_timeout: 60
     detect:
       enabled: false
-  ip_101139_cam_006:
+  ip_101119_cam_006:
     enabled: true
     type: generic
     ffmpeg:
       apple_compatibility: true
       inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0601
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0602
         roles:
         - detect
     ui:
@@ -108,13 +108,13 @@ cameras:
     best_image_timeout: 60
     detect:
       enabled: false
-  ip_101139_cam_007:
+  ip_101119_cam_007:
     enabled: true
     type: generic
     ffmpeg:
       apple_compatibility: true
       inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0701
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0702
         roles:
         - detect
     ui:
@@ -123,13 +123,13 @@ cameras:
     best_image_timeout: 60
     detect:
       enabled: false
-  ip_101120_cam_002:
+  ip_101119_cam_008:
     enabled: true
     type: generic
     ffmpeg:
       apple_compatibility: true
       inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER_TOMO}:{FRIGATE_RTSP_PASSWORD_TOMO}@10.1.1.20:554/Streaming/Channels/0201
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0802
         roles:
         - detect
     ui:
@@ -138,13 +138,13 @@ cameras:
     best_image_timeout: 60
     detect:
       enabled: false
-  ip_101120_cam_003:
+  ip_101119_cam_009:
     enabled: true
     type: generic
     ffmpeg:
       apple_compatibility: true
       inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER_TOMO}:{FRIGATE_RTSP_PASSWORD_TOMO}@10.1.1.20:554/Streaming/Channels/0301
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/0902
         roles:
         - detect
     ui:
@@ -153,122 +153,17 @@ cameras:
     best_image_timeout: 60
     detect:
       enabled: false
-  ip_20112_cam_001:
+  ip_101119_cam_010:
     enabled: true
     type: generic
     ffmpeg:
       apple_compatibility: true
       inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0101
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.19:554/Streaming/Channels/1002
         roles:
         - detect
     ui:
       order: 10
-      dashboard: false
-    best_image_timeout: 60
-    detect:
-      enabled: false
-  ip_20112_cam_002:
-    enabled: true
-    type: generic
-    ffmpeg:
-      apple_compatibility: true
-      inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0201
-        roles:
-        - detect
-    ui:
-      order: 11
-      dashboard: false
-    best_image_timeout: 60
-    detect:
-      enabled: false
-  ip_20112_cam_003:
-    enabled: true
-    type: generic
-    ffmpeg:
-      apple_compatibility: true
-      inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0301
-        roles:
-        - detect
-    ui:
-      order: 12
-      dashboard: false
-    best_image_timeout: 60
-    detect:
-      enabled: false
-  ip_20112_cam_004:
-    enabled: true
-    type: generic
-    ffmpeg:
-      apple_compatibility: true
-      inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0401
-        roles:
-        - detect
-    ui:
-      order: 13
-      dashboard: false
-    best_image_timeout: 60
-    detect:
-      enabled: false
-  ip_20112_cam_005:
-    enabled: true
-    type: generic
-    ffmpeg:
-      apple_compatibility: true
-      inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0501
-        roles:
-        - detect
-    ui:
-      order: 14
-      dashboard: false
-    best_image_timeout: 60
-    detect:
-      enabled: false
-  ip_20112_cam_006:
-    enabled: true
-    type: generic
-    ffmpeg:
-      apple_compatibility: true
-      inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0601
-        roles:
-        - detect
-    ui:
-      order: 15
-      dashboard: false
-    best_image_timeout: 60
-    detect:
-      enabled: false
-  ip_20112_cam_007:
-    enabled: true
-    type: generic
-    ffmpeg:
-      apple_compatibility: true
-      inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0701
-        roles:
-        - detect
-    ui:
-      order: 16
-      dashboard: false
-    best_image_timeout: 60
-    detect:
-      enabled: false
-  ip_20112_cam_008:
-    enabled: true
-    type: generic
-    ffmpeg:
-      apple_compatibility: true
-      inputs:
-      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0801
-        roles:
-        - detect
-    ui:
-      order: 17
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -283,7 +178,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 18
+      order: 11
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -298,7 +193,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 19
+      order: 12
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -313,7 +208,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 20
+      order: 13
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -328,7 +223,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 21
+      order: 14
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -343,7 +238,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 22
+      order: 15
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -358,7 +253,97 @@ cameras:
         roles:
         - detect
     ui:
-      order: 23
+      order: 16
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101120_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER_TOMO}:{FRIGATE_RTSP_PASSWORD_TOMO}@10.1.1.20:554/Streaming/Channels/0101
+        roles:
+        - detect
+    ui:
+      order: 17
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101120_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER_TOMO}:{FRIGATE_RTSP_PASSWORD_TOMO}@10.1.1.20:554/Streaming/Channels/0201
+        roles:
+        - detect
+    ui:
+      order: 18
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101120_cam_003:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER_TOMO}:{FRIGATE_RTSP_PASSWORD_TOMO}@10.1.1.20:554/Streaming/Channels/0301
+        roles:
+        - detect
+    ui:
+      order: 19
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101120_cam_004:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER_TOMO}:{FRIGATE_RTSP_PASSWORD_TOMO}@10.1.1.20:554/Streaming/Channels/0401
+        roles:
+        - detect
+    ui:
+      order: 20
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0101
+        roles:
+        - detect
+    ui:
+      order: 21
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0201
+        roles:
+        - detect
+    ui:
+      order: 22
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -373,7 +358,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 24
+      order: 23
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -388,7 +373,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 25
+      order: 24
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -403,7 +388,82 @@ cameras:
         roles:
         - detect
     ui:
+      order: 25
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_006:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0601
+        roles:
+        - detect
+    ui:
       order: 26
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_007:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0701
+        roles:
+        - detect
+    ui:
+      order: 27
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_008:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0801
+        roles:
+        - detect
+    ui:
+      order: 28
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_009:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/0901
+        roles:
+        - detect
+    ui:
+      order: 29
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101124_cam_010:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.24:554/Streaming/Channels/1001
+        roles:
+        - detect
+    ui:
+      order: 30
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -418,7 +478,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 27
+      order: 31
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -433,7 +493,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 28
+      order: 32
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -448,7 +508,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 29
+      order: 33
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -463,7 +523,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 30
+      order: 34
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -478,7 +538,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 31
+      order: 35
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -493,7 +553,112 @@ cameras:
         roles:
         - detect
     ui:
-      order: 32
+      order: 36
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0101
+        roles:
+        - detect
+    ui:
+      order: 37
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0201
+        roles:
+        - detect
+    ui:
+      order: 38
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_003:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0301
+        roles:
+        - detect
+    ui:
+      order: 39
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_004:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0401
+        roles:
+        - detect
+    ui:
+      order: 40
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_005:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0501
+        roles:
+        - detect
+    ui:
+      order: 41
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_006:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0601
+        roles:
+        - detect
+    ui:
+      order: 42
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_101139_cam_007:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@10.1.1.39:554/Streaming/Channels/0701
+        roles:
+        - detect
+    ui:
+      order: 43
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -508,7 +673,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 33
+      order: 44
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -523,7 +688,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 34
+      order: 45
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -538,7 +703,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 35
+      order: 46
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -553,7 +718,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 36
+      order: 47
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -568,7 +733,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 37
+      order: 48
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -583,7 +748,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 38
+      order: 49
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -598,7 +763,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 39
+      order: 50
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -613,7 +778,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 40
+      order: 51
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -628,7 +793,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 41
+      order: 52
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -643,7 +808,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 42
+      order: 53
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -658,7 +823,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 43
+      order: 54
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -673,7 +838,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 44
+      order: 55
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -688,7 +853,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 45
+      order: 56
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -703,7 +868,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 46
+      order: 57
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -718,7 +883,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 47
+      order: 58
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -733,7 +898,127 @@ cameras:
         roles:
         - detect
     ui:
-      order: 48
+      order: 59
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_001:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0101
+        roles:
+        - detect
+    ui:
+      order: 60
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_002:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0201
+        roles:
+        - detect
+    ui:
+      order: 61
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_003:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0301
+        roles:
+        - detect
+    ui:
+      order: 62
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_004:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0401
+        roles:
+        - detect
+    ui:
+      order: 63
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_005:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0501
+        roles:
+        - detect
+    ui:
+      order: 64
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_006:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0601
+        roles:
+        - detect
+    ui:
+      order: 65
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_007:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0701
+        roles:
+        - detect
+    ui:
+      order: 66
+      dashboard: false
+    best_image_timeout: 60
+    detect:
+      enabled: false
+  ip_20112_cam_008:
+    enabled: true
+    type: generic
+    ffmpeg:
+      apple_compatibility: true
+      inputs:
+      - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@20.1.1.2:554/Streaming/Channels/0801
+        roles:
+        - detect
+    ui:
+      order: 67
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -748,7 +1033,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 49
+      order: 68
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -763,7 +1048,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 50
+      order: 69
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -778,7 +1063,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 51
+      order: 70
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -793,7 +1078,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 52
+      order: 71
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -808,7 +1093,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 53
+      order: 72
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -823,7 +1108,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 54
+      order: 73
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -838,7 +1123,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 55
+      order: 74
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -853,7 +1138,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 56
+      order: 75
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -868,7 +1153,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 57
+      order: 76
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -883,7 +1168,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 58
+      order: 77
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -898,7 +1183,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 59
+      order: 78
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -913,7 +1198,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 60
+      order: 79
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -928,7 +1213,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 61
+      order: 80
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -943,7 +1228,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 62
+      order: 81
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -958,7 +1243,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 63
+      order: 82
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -973,7 +1258,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 64
+      order: 83
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -988,7 +1273,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 65
+      order: 84
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1003,7 +1288,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 66
+      order: 85
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1018,7 +1303,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 67
+      order: 86
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1033,7 +1318,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 68
+      order: 87
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1048,7 +1333,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 69
+      order: 88
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1063,7 +1348,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 70
+      order: 89
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1078,7 +1363,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 71
+      order: 90
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1093,7 +1378,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 72
+      order: 91
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1108,7 +1393,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 73
+      order: 92
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1123,7 +1408,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 74
+      order: 93
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1138,7 +1423,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 75
+      order: 94
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1153,7 +1438,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 76
+      order: 95
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1168,7 +1453,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 77
+      order: 96
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1183,7 +1468,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 78
+      order: 97
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1198,7 +1483,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 79
+      order: 98
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1213,7 +1498,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 80
+      order: 99
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1228,7 +1513,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 81
+      order: 100
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1243,7 +1528,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 82
+      order: 101
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1258,7 +1543,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 83
+      order: 102
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1273,7 +1558,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 84
+      order: 103
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1288,7 +1573,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 85
+      order: 104
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1303,7 +1588,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 86
+      order: 105
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1318,7 +1603,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 87
+      order: 106
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1333,7 +1618,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 88
+      order: 107
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1348,7 +1633,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 89
+      order: 108
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1363,7 +1648,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 90
+      order: 109
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1378,7 +1663,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 91
+      order: 110
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1393,7 +1678,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 92
+      order: 111
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1408,7 +1693,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 93
+      order: 112
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1423,7 +1708,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 94
+      order: 113
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1438,7 +1723,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 95
+      order: 114
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1453,7 +1738,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 96
+      order: 115
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1468,7 +1753,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 97
+      order: 116
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1483,7 +1768,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 98
+      order: 117
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1498,7 +1783,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 99
+      order: 118
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1513,7 +1798,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 100
+      order: 119
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1528,7 +1813,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 101
+      order: 120
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1543,7 +1828,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 102
+      order: 121
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1558,7 +1843,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 103
+      order: 122
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1573,7 +1858,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 104
+      order: 123
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1588,7 +1873,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 105
+      order: 124
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1603,7 +1888,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 106
+      order: 125
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1618,7 +1903,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 107
+      order: 126
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1633,7 +1918,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 108
+      order: 127
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1648,7 +1933,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 109
+      order: 128
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1663,7 +1948,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 110
+      order: 129
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1678,7 +1963,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 111
+      order: 130
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1693,7 +1978,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 112
+      order: 131
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1708,7 +1993,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 113
+      order: 132
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1723,7 +2008,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 114
+      order: 133
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1738,7 +2023,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 115
+      order: 134
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1753,7 +2038,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 116
+      order: 135
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1768,7 +2053,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 117
+      order: 136
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1783,7 +2068,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 118
+      order: 137
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1798,7 +2083,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 119
+      order: 138
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1813,7 +2098,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 120
+      order: 139
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1828,7 +2113,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 121
+      order: 140
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1843,7 +2128,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 122
+      order: 141
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1858,7 +2143,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 123
+      order: 142
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1873,7 +2158,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 124
+      order: 143
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1888,7 +2173,7 @@ cameras:
         roles:
         - detect
     ui:
-      order: 125
+      order: 144
       dashboard: false
     best_image_timeout: 60
     detect:
@@ -1903,14 +2188,62 @@ cameras:
         roles:
         - detect
     ui:
-      order: 126
+      order: 145
       dashboard: false
     best_image_timeout: 60
     detect:
       enabled: false
 camera_groups:
-  ip_101139:
+  ip_101119:
     order: 1
+    icon: LuAirplay
+    cameras:
+    - ip_101119_cam_001
+    - ip_101119_cam_002
+    - ip_101119_cam_003
+    - ip_101119_cam_004
+    - ip_101119_cam_005
+    - ip_101119_cam_006
+    - ip_101119_cam_007
+    - ip_101119_cam_008
+    - ip_101119_cam_009
+    - ip_101119_cam_010
+    - ip_101119_cam_011
+    - ip_101119_cam_012
+    - ip_101119_cam_013
+    - ip_101119_cam_014
+    - ip_101119_cam_015
+    - ip_101119_cam_016
+  ip_101120:
+    order: 2
+    icon: LuAirplay
+    cameras:
+    - ip_101120_cam_001
+    - ip_101120_cam_002
+    - ip_101120_cam_003
+    - ip_101120_cam_004
+  ip_101124:
+    order: 3
+    icon: LuAirplay
+    cameras:
+    - ip_101124_cam_001
+    - ip_101124_cam_002
+    - ip_101124_cam_003
+    - ip_101124_cam_004
+    - ip_101124_cam_005
+    - ip_101124_cam_006
+    - ip_101124_cam_007
+    - ip_101124_cam_008
+    - ip_101124_cam_009
+    - ip_101124_cam_010
+    - ip_101124_cam_011
+    - ip_101124_cam_012
+    - ip_101124_cam_013
+    - ip_101124_cam_014
+    - ip_101124_cam_015
+    - ip_101124_cam_016
+  ip_101139:
+    order: 4
     icon: LuAirplay
     cameras:
     - ip_101139_cam_001
@@ -1920,49 +2253,8 @@ camera_groups:
     - ip_101139_cam_005
     - ip_101139_cam_006
     - ip_101139_cam_007
-  ip_101120:
-    order: 2
-    icon: LuAirplay
-    cameras:
-    - ip_101120_cam_002
-    - ip_101120_cam_003
-  ip_20112:
-    order: 3
-    icon: LuAirplay
-    cameras:
-    - ip_20112_cam_001
-    - ip_20112_cam_002
-    - ip_20112_cam_003
-    - ip_20112_cam_004
-    - ip_20112_cam_005
-    - ip_20112_cam_006
-    - ip_20112_cam_007
-    - ip_20112_cam_008
-  ip_101119:
-    order: 4
-    icon: LuAirplay
-    cameras:
-    - ip_101119_cam_011
-    - ip_101119_cam_012
-    - ip_101119_cam_013
-    - ip_101119_cam_014
-    - ip_101119_cam_015
-    - ip_101119_cam_016
-  ip_101124:
-    order: 5
-    icon: LuAirplay
-    cameras:
-    - ip_101124_cam_003
-    - ip_101124_cam_004
-    - ip_101124_cam_005
-    - ip_101124_cam_011
-    - ip_101124_cam_012
-    - ip_101124_cam_013
-    - ip_101124_cam_014
-    - ip_101124_cam_015
-    - ip_101124_cam_016
   ip_101150:
-    order: 6
+    order: 5
     icon: LuAirplay
     cameras:
     - ip_101150_cam_001
@@ -1981,6 +2273,18 @@ camera_groups:
     - ip_101150_cam_014
     - ip_101150_cam_015
     - ip_101150_cam_016
+  ip_20112:
+    order: 6
+    icon: LuAirplay
+    cameras:
+    - ip_20112_cam_001
+    - ip_20112_cam_002
+    - ip_20112_cam_003
+    - ip_20112_cam_004
+    - ip_20112_cam_005
+    - ip_20112_cam_006
+    - ip_20112_cam_007
+    - ip_20112_cam_008
   ip_20113:
     order: 7
     icon: LuAirplay
