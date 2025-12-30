@@ -1,5 +1,5 @@
 auth:
-  reset_admin_password: true
+  reset_admin_password: false
 birdseye:
   enabled: false
 mqtt:

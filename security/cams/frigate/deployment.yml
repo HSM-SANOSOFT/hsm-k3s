@@ -71,11 +71,11 @@ spec:
 
           resources:
             requests:
-              cpu: "16"
-              memory: "16Gi"
+              cpu: "40"
+              memory: "48Gi"
             limits:
-              cpu: "32"
-              memory: "32Gi"
+              cpu: "40"
+              memory: "64Gi"
 
       volumes:
         - name: config
