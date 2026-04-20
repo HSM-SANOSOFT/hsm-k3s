@@ -11,6 +11,7 @@ spec:
     - hosts:
         - openrouter.hospitalsm.org
         - openrouter-2.hospitalsm.org
+        - chartdb.hospitalsm.org
       secretName: app-tls-secret
   rules:
     - host: openrouter.hospitalsm.org
@@ -31,5 +32,15 @@ spec:
             backend:
               service:
                 name: traefik-openrouter
+                port:
+                  number: 8080
+    - host: chartdb.hospitalsm.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: chartdb
                 port:
                   number: 8080

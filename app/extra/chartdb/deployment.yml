@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chartdb
+  namespace: app
+  labels:
+    app: chartdb
+  annotations:
+    secrets.infisical.com/auto-redeploy: "true"
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  progressDeadlineSeconds: 600
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: chartdb
+  template:
+    metadata:
+      labels:
+        app: chartdb
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: chartdb
+          image: ghcr.io/chartdb/chartdb:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
+      imagePullSecrets:
+        - name: ghcr-login-secret
