@@ -6,7 +6,7 @@ metadata:
   labels:
     app: hsm-be-has-cob-gdp-transaccion
   annotations:
-    secrets.infisical.com/auto-redeploy: "true"
+    secrets.infisical.com/auto-reload: "true"
 spec:
   replicas: 2
   selector:
@@ -31,4 +31,3 @@ spec:
                 name: general-secret
       imagePullSecrets:
         - name: ghcr-login-secret
-
